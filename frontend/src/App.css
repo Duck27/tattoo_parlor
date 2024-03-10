@@ -1,0 +1,62 @@
+html {
+  font-size: clamp(5px, 3vw, 16px);
+  scroll-behavior: smooth;
+}
+
+.logo {
+  width: 100%;
+  min-height: 600px;
+  padding-bottom: 56.25%;
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-out;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  bottom: -4px;
+  left: 50%;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.side_lines::before,
+.side_lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 2px;
+  background: white;
+}
+
+.side_lines::before {
+  left: 105%;
+}
+
+.side_lines::after {
+  right: 105%;
+}
